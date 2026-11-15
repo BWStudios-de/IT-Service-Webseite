@@ -253,36 +253,50 @@
           <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
         </div>
         <input type="hidden" id="form-ts" name="ts" value="">
-        <fieldset class="form-row choice-group">
-          <legend>Wobei brauchst du Hilfe?</legend>
-          <label class="choice"><input type="radio" name="thema" value="Drucker oder Scanner"><span>Drucker oder Scanner</span></label>
-          <label class="choice"><input type="radio" name="thema" value="WLAN oder Router"><span>WLAN oder Router</span></label>
-          <label class="choice"><input type="radio" name="thema" value="Smartphone oder Tablet"><span>Smartphone oder Tablet</span></label>
-          <label class="choice"><input type="radio" name="thema" value="Computer oder Laptop"><span>Computer oder Laptop</span></label>
-          <label class="choice"><input type="radio" name="thema" value="E-Mail-Konto"><span>E-Mail-Konto</span></label>
-          <label class="choice"><input type="radio" name="thema" value="Etwas anderes" checked><span>Etwas anderes</span></label>
+        <fieldset class="form-row choice-group step">
+          <legend>Was möchtest du?</legend>
+          <label class="choice"><input type="radio" name="typ" value="projekt" checked><span>Hilfe anfragen</span></label>
+          <label class="choice"><input type="radio" name="typ" value="termin"><span>Termin vereinbaren</span></label>
+          <label class="choice"><input type="radio" name="typ" value="frage"><span>Allgemeine Frage</span></label>
         </fieldset>
-        <div class="form-row">
+        <div class="form-row step" data-rule="name">
           <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" aria-describedby="name-error">
           <p class="field-error" id="name-error"></p>
         </div>
-        <div class="form-row">
+        <div class="form-row step" data-rule="email">
           <label for="email">E-Mail <span class="req" aria-hidden="true">*</span></label>
           <input type="email" id="email" name="email" autocomplete="email" spellcheck="false" required aria-required="true" aria-describedby="email-error">
           <p class="field-error" id="email-error"></p>
         </div>
-        <div class="form-row">
+        <div class="form-row step">
           <label for="phone">Telefon (optional, für einen Rückruf)</label>
           <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
         </div>
-        <div class="form-row">
-          <label for="ort">Ort (optional)</label>
-          <input type="text" id="ort" name="ort" autocomplete="address-level2" maxlength="80">
+        <div class="form-row step" data-show="termin" data-rule="date" hidden>
+            <label for="date">Datum <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="date" name="date" aria-describedby="date-error" disabled>
+            <p class="field-error" id="date-error"></p>
         </div>
-        <div class="form-row">
-          <label for="message">Was ist das Anliegen? (optional)</label>
-          <textarea id="message" name="message" rows="4" maxlength="1000"></textarea>
+        <div data-show="termin" class="step" data-rule="time" hidden>
+          <fieldset class="form-row choice-group" aria-describedby="time-error">
+            <legend>Uhrzeit <span class="req" aria-hidden="true">*</span></legend>
+            <label class="choice"><input type="radio" name="time" value="12:00"><span>12:00</span></label><label class="choice"><input type="radio" name="time" value="12:30"><span>12:30</span></label><label class="choice"><input type="radio" name="time" value="13:00"><span>13:00</span></label><label class="choice"><input type="radio" name="time" value="13:30"><span>13:30</span></label><label class="choice"><input type="radio" name="time" value="14:00"><span>14:00</span></label><label class="choice"><input type="radio" name="time" value="14:30"><span>14:30</span></label><label class="choice"><input type="radio" name="time" value="15:00"><span>15:00</span></label><label class="choice"><input type="radio" name="time" value="15:30"><span>15:30</span></label><label class="choice"><input type="radio" name="time" value="16:00"><span>16:00</span></label><label class="choice"><input type="radio" name="time" value="16:30"><span>16:30</span></label><label class="choice"><input type="radio" name="time" value="17:00"><span>17:00</span></label><label class="choice"><input type="radio" name="time" value="17:30"><span>17:30</span></label><label class="choice"><input type="radio" name="time" value="18:00"><span>18:00</span></label><label class="choice"><input type="radio" name="time" value="18:30"><span>18:30</span></label><label class="choice"><input type="radio" name="time" value="19:00"><span>19:00</span></label><label class="choice"><input type="radio" name="time" value="19:30"><span>19:30</span></label>
+            <p class="field-error" id="time-error"></p>
+          </fieldset>
+        </div>
+        <fieldset class="form-row choice-group step" data-show="projekt">
+          <legend>Wobei brauchst du Hilfe?</legend>
+          <label class="choice"><input type="radio" name="thema" value="Drucker oder Scanner"><span>Drucker oder Scanner</span></label><label class="choice"><input type="radio" name="thema" value="WLAN oder Router"><span>WLAN oder Router</span></label><label class="choice"><input type="radio" name="thema" value="Smartphone oder Tablet"><span>Smartphone oder Tablet</span></label><label class="choice"><input type="radio" name="thema" value="Computer oder Laptop"><span>Computer oder Laptop</span></label><label class="choice"><input type="radio" name="thema" value="E-Mail-Konto"><span>E-Mail-Konto</span></label><label class="choice"><input type="radio" name="thema" value="Sonstiges"><span>Sonstiges</span></label>
+        </fieldset>
+        <div class="form-row step">
+          <label for="message">Anmerkungen (optional)</label>
+          <textarea id="message" name="message" rows="4" maxlength="1000" aria-describedby="message-error"></textarea>
+          <p class="field-error" id="message-error"></p>
+        </div>
+        <div class="form-nav" hidden>
+          <button type="button" class="btn btn-ghost form-back">Zurück</button>
+          <button type="button" class="btn btn-primary form-next">Weiter</button>
         </div>
         <button type="submit" class="btn btn-primary form-submit">Anfrage senden</button>
         <p class="assurance" id="form-privacy">Mit dem Absenden bestätigst du, dass du die <a href="/datenschutz">Datenschutzerklärung</a> gelesen hast.</p>

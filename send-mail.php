@@ -144,11 +144,12 @@ function confirm_limit($email, $record, $windowSeconds = 3600) {
 
 $name = clean_field($_POST['name'] ?? '', 120);
 $email = clean_field($_POST['email'] ?? '', 190);
+$subject = clean_field($_POST['subject'] ?? '', 150);
+$message = trim(substr((string) ($_POST['message'] ?? ''), 0, 5000));
+$typLabels = ['projekt' => 'Hilfe anfragen', 'termin' => 'Termin vereinbaren', 'frage' => 'Allgemeine Frage'];
+$typ = $typLabels[$_POST['typ'] ?? ''] ?? 'Allgemeine Frage';
+$thema = clean_field($_POST['thema'] ?? '', 60);
 $phone = clean_field($_POST['phone'] ?? '', 40);
-$ort = clean_field($_POST['ort'] ?? '', 80);
-$message = trim(substr((string) ($_POST['message'] ?? ''), 0, 1000));
-$themen = ['Drucker oder Scanner', 'WLAN oder Router', 'Smartphone oder Tablet', 'Computer oder Laptop', 'E-Mail-Konto', 'Etwas anderes'];
-$thema = in_array($_POST['thema'] ?? '', $themen, true) ? $_POST['thema'] : 'Etwas anderes';
 $honeypot = trim((string) ($_POST['website'] ?? ''));
 $formLoadedAt = (int) ($_POST['ts'] ?? 0);
 
@@ -159,29 +160,67 @@ if ($honeypot !== '' || $submittedTooFast) {
     respond(200, ['ok' => true]);
 }
 
+// Terminanfrage: nur speichern und an info@ melden, keine Zusage und keine Kalenderbuchung.
+if (($_POST['typ'] ?? '') === 'termin') {
+    $date = clean_field($_POST['date'] ?? '', 10);
+    $time = clean_field($_POST['time'] ?? '', 5);
+    $d = DateTime::createFromFormat('!Y-m-d', $date);
+    $validDate = $d && $d->format('Y-m-d') === $date && $date > date('Y-m-d');
+    $validTime = preg_match('/^1[2-9]:(00|30)$/', $time);
+    if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$validDate || !$validTime) {
+        respond(422, ['ok' => false, 'error' => 'invalid_input']);
+    }
+    $message = substr($message, 0, 1000);
+    $when = $d->format('d.m.Y') . ' um ' . $time . ' Uhr';
+
+    $dir = __DIR__ . '/var';
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0700, true);
+    }
+    @file_put_contents($dir . '/termine.jsonl', json_encode([
+        'eingang' => date('c'), 'datum' => $date, 'uhrzeit' => $time,
+        'name' => $name, 'email' => $email, 'nachricht' => $message, 'art' => $typ, 'status' => 'angefragt',
+    ], JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX);
+
+    try {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = $config['smtp_host'];
+        $mail->Port = $config['smtp_port'];
+        $mail->SMTPSecure = $config['smtp_secure'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $config['smtp_user'];
+        $mail->Password = $config['smtp_pass'];
+        $mail->CharSet = 'UTF-8';
+        $mail->setFrom($config['mail_from'], $config['mail_from_name']);
+        $mail->addAddress($config['mail_to']);
+        $mail->addReplyTo($email, $name);
+        $mail->Subject = '[IT-Hilfe Terminanfrage] ' . $when . ' – ' . $name;
+        $mail->Body = "Neue Terminanfrage über it.bwstudios.de (IT-Hilfe) (noch nicht bestätigt)\n\n"
+            . "Art der Anfrage: {$typ}\nWunschtermin: {$when}\nName: {$name}\nE-Mail: {$email}\n\n"
+            . "Anmerkungen:\n" . ($message !== '' ? $message : '–') . "\n";
+        $mail->send();
+        respond(200, ['ok' => true]);
+    } catch (\Throwable $e) {
+        respond(500, ['ok' => false, 'error' => 'send_failed']);
+    }
+}
+
 if ($name === '' || $email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     respond(422, ['ok' => false, 'error' => 'invalid_input']);
 }
 
-$subject = $thema . ' – ' . $name;
+$subject = $typ . ($thema !== '' ? ' – ' . $thema : '') . ' – ' . $name;
+$message = substr($message, 0, 1000);
 
-$body = "Neue Anfrage über it.bwstudios.de (IT-Hilfe)
-
-";
-$body .= "Thema: {$thema}
-";
-$body .= "Name: {$name}
-";
-$body .= "E-Mail: {$email}
-";
-$body .= "Telefon: " . ($phone !== '' ? $phone : '–') . "
-";
-$body .= "Ort: " . ($ort !== '' ? $ort : '–') . "
-
-";
-$body .= "Anmerkungen:
-" . ($message !== '' ? $message : '–') . "
-";
+$body = "Neue Anfrage über it.bwstudios.de (IT-Hilfe)\n\n";
+$body .= "Art der Anfrage: {$typ}\n";
+if ($thema !== '') {
+    $body .= "Thema: {$thema}\n";
+}
+$body .= "Name: {$name}\n";
+$body .= "E-Mail: {$email}\n\n";
+$body .= "Anmerkungen:\n" . ($message !== '' ? $message : '–') . "\n";
 
 try {
     $mail = new PHPMailer(true);
@@ -232,7 +271,7 @@ try {
             $confirm->addCustomHeader('Auto-Submitted', 'auto-replied');
             $confirm->addCustomHeader('Precedence', 'bulk');
 
-            $confirm->Subject = 'Danke für deine Nachricht – BW Studios';
+            $confirm->Subject = 'Danke für deine Anfrage – BW Studios IT-Hilfe';
             $confirm->Body = $reply;
 
             $confirm->send();
