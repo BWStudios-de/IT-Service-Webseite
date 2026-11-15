@@ -1,0 +1,79 @@
+ErrorDocument 404 /404.html
+
+# --- HTTPS erzwingen ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Saubere URLs (ohne .html und ohne index) ---
+<IfModule mod_rewrite.c>
+  RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?]
+  RewriteRule ^index(\.html)?$ / [L,R=301]
+  RewriteCond %{THE_REQUEST} \s/+(impressum|datenschutz)\.html[\s?]
+  RewriteRule ^(impressum|datenschutz)\.html$ /$1 [L,R=301]
+  RewriteRule ^(impressum|datenschutz)/?$ $1.html [L]
+</IfModule>
+
+# --- Sensible Dateien/Ordner sperren ---
+<FilesMatch "^mail-config.*\.php$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteRule ^var/ - [F,L]
+</IfModule>
+
+Options -Indexes
+
+# --- Versteckte Dateien/Ordner (z. B. .git) sperren ---
+<IfModule mod_rewrite.c>
+  RewriteRule (^|/)\.(?!well-known/) - [F,L]
+</IfModule>
+
+# --- MIME-Types ---
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+  AddType image/svg+xml .svg
+  AddDefaultCharset UTF-8
+</IfModule>
+
+# --- Kompression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript text/javascript application/json application/manifest+json application/xml image/svg+xml
+</IfModule>
+
+# --- Browser-Caching (CSS/JS ohne Fingerprint: kurz, Medien/Fonts: lang) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.woff2$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# --- Security-Header ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

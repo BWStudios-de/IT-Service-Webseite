@@ -1,0 +1,5 @@
+# Enthaelt das echte Postfach-Passwort - niemals einchecken.
+mail-config.php
+
+# Laufzeit-Daten des Rate-Limits im Kontaktformular.
+/var/

@@ -1,0 +1,10 @@
+# BW Studios IT-Hilfe
+
+> Persönliche IT-Hilfe von Bennet Wegener (BW Studios, Nindorf) für Privatpersonen und kleine Betriebe in Dithmarschen: Drucker, WLAN, Smartphone und Computer einrichten sowie Einweisung in die Nutzung, vor Ort oder per Fernzugriff. Keine Hardware-Reparaturen, keine Datenrettung, keine Server.
+
+## Seiten
+
+- [Startseite](https://it.bwstudios.de/): Leistungen, Ablauf, Einsatzgebiet, häufige Fragen und Kontaktformular.
+- [Webdesign von BW Studios](https://bwstudios.de/webdesign/): Webseiten und Landingpages für Betriebe und Vereine in Dithmarschen.
+- [Impressum](https://it.bwstudios.de/impressum): Anbieterangaben von Bennet Wegener, Hauptstraße 74, 25704 Nindorf.
+- [Datenschutz](https://it.bwstudios.de/datenschutz): Datenschutzerklärung.
