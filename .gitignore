@@ -3,3 +3,6 @@ mail-config.php
 
 # Laufzeit-Daten des Rate-Limits im Kontaktformular.
 /var/
+
+# Browser-Testdateien
+.playwright-cli/
