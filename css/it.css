@@ -7,6 +7,7 @@
 .it-limits { margin: 40px 0 0; max-width: 70ch; color: var(--fog, #8aa294); }
 .it-limits strong { color: var(--bone, #f2f0ec); font-weight: 600; }
 
+.it-prices strong { font-size: 1.375rem; }
 .sub-related { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0; }
 
 @media (max-width: 900px) {
