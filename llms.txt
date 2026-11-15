@@ -5,6 +5,10 @@
 ## Seiten
 
 - [Startseite](https://it.bwstudios.de/): Leistungen, Ablauf, Einsatzgebiet, häufige Fragen und Kontaktformular.
+- [Drucker & Scanner](https://it.bwstudios.de/drucker-einrichten/): Neuer Drucker oder Scanner, aber Computer oder Handy finden ihn nicht? Ich richte ihn bei dir ein, verbinde alle Geräte und drucke zum Schluss eine Testseite.
+- [WLAN & Router](https://it.bwstudios.de/wlan-einrichten/): Neuer Router vom Anbieter oder schlechter Empfang im Obergeschoss? Ich richte dein WLAN ein, verbinde deine Geräte und sorge dafür, dass es im ganzen Haus läuft.
+- [Smartphone & Tablet](https://it.bwstudios.de/smartphone-einrichten/): Neues Handy gekauft und jetzt soll alles vom alten wieder drauf? Ich richte dein Smartphone oder Tablet ein, übertrage deine Daten und zeige dir die wichtigsten Handgriffe.
+- [Computer & Laptop](https://it.bwstudios.de/computer-einrichten/): Neuer Computer, aber alles ist fremd? Ich mache ihn startklar, spiele deine Daten vom alten Gerät rüber und zeige dir, wie du damit arbeitest.
 - [Webdesign von BW Studios](https://bwstudios.de/webdesign/): Webseiten und Landingpages für Betriebe und Vereine in Dithmarschen.
 - [Impressum](https://it.bwstudios.de/impressum): Anbieterangaben von Bennet Wegener, Hauptstraße 74, 25704 Nindorf.
 - [Datenschutz](https://it.bwstudios.de/datenschutz): Datenschutzerklärung.
