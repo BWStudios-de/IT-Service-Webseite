@@ -247,7 +247,7 @@
         </div>
       </div>
 
-      <form class="contact-form" id="anfrage-form" novalidate aria-label="Anfrage zur IT-Hilfe">
+      <form class="contact-form" id="anfrage-form" novalidate aria-label="Anfrage">
         <div class="form-row form-row-honeypot" aria-hidden="true" inert>
           <label for="website">Website</label>
           <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
@@ -255,7 +255,7 @@
         <input type="hidden" id="form-ts" name="ts" value="">
         <fieldset class="form-row choice-group step">
           <legend>Was möchtest du?</legend>
-          <label class="choice"><input type="radio" name="typ" value="projekt" checked><span>Hilfe anfragen</span></label>
+          <label class="choice"><input type="radio" name="typ" value="projekt" checked><span>Projekt anfragen</span></label>
           <label class="choice"><input type="radio" name="typ" value="termin"><span>Termin vereinbaren</span></label>
           <label class="choice"><input type="radio" name="typ" value="frage"><span>Allgemeine Frage</span></label>
         </fieldset>
@@ -268,10 +268,6 @@
           <label for="email">E-Mail <span class="req" aria-hidden="true">*</span></label>
           <input type="email" id="email" name="email" autocomplete="email" spellcheck="false" required aria-required="true" aria-describedby="email-error">
           <p class="field-error" id="email-error"></p>
-        </div>
-        <div class="form-row step">
-          <label for="phone">Telefon (optional, für einen Rückruf)</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
         </div>
         <div class="form-row step" data-show="termin" data-rule="date" hidden>
             <label for="date">Datum <span class="req" aria-hidden="true">*</span></label>
@@ -286,7 +282,7 @@
           </fieldset>
         </div>
         <fieldset class="form-row choice-group step" data-show="projekt">
-          <legend>Wobei brauchst du Hilfe?</legend>
+          <legend>Was brauchst du?</legend>
           <label class="choice"><input type="radio" name="thema" value="Drucker oder Scanner"><span>Drucker oder Scanner</span></label><label class="choice"><input type="radio" name="thema" value="WLAN oder Router"><span>WLAN oder Router</span></label><label class="choice"><input type="radio" name="thema" value="Smartphone oder Tablet"><span>Smartphone oder Tablet</span></label><label class="choice"><input type="radio" name="thema" value="Computer oder Laptop"><span>Computer oder Laptop</span></label><label class="choice"><input type="radio" name="thema" value="E-Mail-Konto"><span>E-Mail-Konto</span></label><label class="choice"><input type="radio" name="thema" value="Sonstiges"><span>Sonstiges</span></label>
         </fieldset>
         <div class="form-row step">
