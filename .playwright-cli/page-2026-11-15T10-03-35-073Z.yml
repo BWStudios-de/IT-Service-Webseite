@@ -1,0 +1,294 @@
+- generic [active] [ref=e1]:
+  - link "Zum Inhalt springen" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "BW Studios IT-Hilfe – zum Seitenanfang" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation "Hauptnavigation" [ref=e7]:
+        - link "Was ich einrichte" [ref=e8] [cursor=pointer]:
+          - /url: "#leistungen"
+        - link "Preise" [ref=e9] [cursor=pointer]:
+          - /url: "#preise"
+        - link "Ablauf" [ref=e10] [cursor=pointer]:
+          - /url: "#ablauf"
+        - link "Einsatzgebiet" [ref=e11] [cursor=pointer]:
+          - /url: "#einsatzgebiet"
+        - link "Fragen" [ref=e12] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Kontakt" [ref=e13] [cursor=pointer]:
+          - /url: "#kontakt"
+        - link "Webdesign" [ref=e14] [cursor=pointer]:
+          - /url: https://bwstudios.de/webdesign/
+      - link "Hilfe anfragen" [ref=e15] [cursor=pointer]:
+        - /url: "#kontakt"
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "IT-Hilfe in Dithmarschen, damit alles einfach läuft." [level=1] [ref=e20]
+        - paragraph [ref=e21]: Ich richte Drucker, WLAN, Smartphone und Computer bei dir ein und zeige dir, wie du damit klarkommst. Persönlich, verständlich, vor Ort oder per Fernzugriff.
+        - generic [ref=e22]:
+          - link "Hilfe anfragen" [ref=e23] [cursor=pointer]:
+            - /url: "#kontakt"
+          - link "+49 151 18409579" [ref=e24] [cursor=pointer]:
+            - /url: tel:+4915118409579
+        - paragraph [ref=e25]: Anfrage kostenlos und unverbindlich. Ich melde mich persönlich bei dir.
+      - list "Was ich einrichte" [ref=e26]:
+        - listitem [ref=e27]: Drucker & Scanner
+        - listitem [ref=e28]: WLAN & Router
+        - listitem [ref=e29]: Smartphone & Tablet
+        - listitem [ref=e30]: Computer & Laptop
+    - region [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: Warum ich
+          - heading [level=2] [ref=e35]:
+            - text: Hilfe, die man
+            - emphasis [ref=e36]: versteht
+        - list [ref=e37]:
+          - listitem [ref=e38]:
+            - generic [aria-hidden] [ref=e39]: "1"
+            - generic [ref=e40]:
+              - strong [ref=e41]: Ohne Fachchinesisch
+              - paragraph [ref=e42]: Ich erkläre jeden Schritt so, dass du ihn danach selbst wiederholen kannst.
+          - listitem [ref=e43]:
+            - generic [aria-hidden] [ref=e44]: "2"
+            - generic [ref=e45]:
+              - strong [ref=e46]: Ein Ansprechpartner
+              - paragraph [ref=e47]: Du sprichst direkt mit mir, nicht mit einer Hotline. Auch für Rückfragen nach dem Termin.
+          - listitem [ref=e48]:
+            - generic [aria-hidden] [ref=e49]: "3"
+            - generic [ref=e50]:
+              - strong [ref=e51]: Vor Ort oder per Fernzugriff
+              - paragraph [ref=e52]: Ich komme zu dir nach Hause oder in den Betrieb. Kleine Dinge erledige ich auch per Fernzugriff.
+    - region [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: Leistungen
+          - heading [level=2] [ref=e57]:
+            - text: Was ich für dich
+            - emphasis [ref=e58]: einrichte
+        - paragraph [ref=e59]: Alltags-IT für zu Hause und für kleine Betriebe. Ein Termin reicht meistens.
+        - generic [ref=e60]:
+          - article [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e63]: "01"
+              - heading "Drucker & Scanner einrichten" [level=3] [ref=e64]
+            - list [ref=e65]:
+              - listitem [ref=e66]: Anschließen und im WLAN anmelden
+              - listitem [ref=e67]: Treiber auf Computer und Smartphone installieren
+              - listitem [ref=e68]: Drucken und Scannen am Handy einrichten
+              - listitem [ref=e69]: Testdruck und kurze Einweisung
+            - link "Mehr zu Drucker & Scanner →" [ref=e70] [cursor=pointer]:
+              - /url: /drucker-einrichten/
+          - article [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: "02"
+              - heading "WLAN & Router einrichten" [level=3] [ref=e74]
+            - list [ref=e75]:
+              - listitem [ref=e76]: Neuen Router anschließen und einrichten
+              - listitem [ref=e77]: Sicheres WLAN-Passwort vergeben
+              - listitem [ref=e78]: Geräte neu verbinden
+              - listitem [ref=e79]: Schlechten Empfang im Haus verbessern
+            - link "Mehr zu WLAN & Router →" [ref=e80] [cursor=pointer]:
+              - /url: /wlan-einrichten/
+          - article [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]: "03"
+              - heading "Smartphone & Tablet einrichten" [level=3] [ref=e84]
+            - list [ref=e85]:
+              - listitem [ref=e86]: Neues Gerät einrichten
+              - listitem [ref=e87]: Fotos, Kontakte und Nachrichten vom alten Gerät übertragen
+              - listitem [ref=e88]: Apps installieren und erklären
+              - listitem [ref=e89]: Videoanrufe und Nachrichten-Apps einrichten
+            - link "Mehr zu Smartphone & Tablet →" [ref=e90] [cursor=pointer]:
+              - /url: /smartphone-einrichten/
+          - article [ref=e91]:
+            - generic [ref=e92]:
+              - generic [ref=e93]: "04"
+              - heading "Computer & Laptop einrichten" [level=3] [ref=e94]
+            - list [ref=e95]:
+              - listitem [ref=e96]: Neuen Computer startklar machen
+              - listitem [ref=e97]: Programme installieren und Updates einspielen
+              - listitem [ref=e98]: E-Mail-Konto einrichten
+              - listitem [ref=e99]: Dateien vom alten auf den neuen Computer übertragen
+              - listitem [ref=e100]: Einweisung in die wichtigsten Funktionen
+            - link "Mehr zu Computer & Laptop →" [ref=e101] [cursor=pointer]:
+              - /url: /computer-einrichten/
+        - paragraph [ref=e102]:
+          - strong [ref=e103]: "Was ich nicht mache:"
+          - text: Hardware reparieren, Daten von defekten Datenträgern retten und Server oder Firmennetzwerke betreuen. Wenn dein Anliegen nicht dazugehört, sage ich es dir ehrlich.
+    - region [ref=e104]:
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - generic [ref=e107]: Preise
+          - heading [level=2] [ref=e108]:
+            - text: Faire Preise,
+            - emphasis [ref=e109]: ohne
+            - text: Überraschung
+        - paragraph [ref=e110]: Abgerechnet wird im 15-Minuten-Takt. Vor dem Termin nenne ich dir eine Preisspanne, damit du weißt, womit du rechnen kannst.
+        - list [ref=e111]:
+          - listitem [ref=e112]:
+            - strong [ref=e113]: "Fernhilfe: 35 € pro Stunde"
+            - paragraph [ref=e114]: Ich schalte mich per Fernzugriff auf deinen Computer. Du siehst alles mit und musst nicht auf einen Termin warten.
+          - listitem [ref=e115]:
+            - strong [ref=e116]: "Vor Ort: 45 € pro Stunde"
+            - paragraph [ref=e117]: Ich komme zu dir nach Hause oder in den Betrieb und richte alles direkt ein.
+          - listitem [ref=e118]:
+            - strong [ref=e119]: "Anfahrt: 10 € pauschal"
+            - paragraph [ref=e120]: Innerhalb von Dithmarschen. Bei mehreren Geräten an einem Termin zahlst du sie nur einmal.
+        - paragraph [ref=e121]:
+          - text: Typisch sind
+          - strong [ref=e122]: etwa eine Stunde für Drucker, WLAN oder Smartphone
+          - text: und
+          - strong [ref=e123]: ein bis zwei Stunden für einen neuen Computer
+          - text: ". Alle Preise sind Endpreise: Als Kleinunternehmer nach § 19 UStG weise ich keine Umsatzsteuer aus."
+    - region [ref=e124]:
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - generic [ref=e127]: Ablauf
+          - heading [level=2] [ref=e128]:
+            - text: So läuft es
+            - emphasis [ref=e129]: ab
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - strong [ref=e132]: Anfrage
+            - paragraph [ref=e133]: Du schreibst oder rufst an und sagst kurz, was nicht läuft oder was eingerichtet werden soll.
+          - listitem [ref=e134]:
+            - strong [ref=e135]: Termin
+            - paragraph [ref=e136]: Wir finden einen Termin bei dir vor Ort oder per Fernzugriff. Vorab sage ich dir, wie lange es voraussichtlich dauert und was es ungefähr kostet.
+          - listitem [ref=e137]:
+            - strong [ref=e138]: Einrichtung
+            - paragraph [ref=e139]: Ich richte alles ein, wir probieren es gemeinsam aus und ich zeige dir die wichtigsten Handgriffe.
+    - region [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - generic [ref=e143]: Einsatzgebiet
+          - heading [level=2] [ref=e144]:
+            - text: Dithmarschen und
+            - emphasis [ref=e145]: Umgebung
+        - paragraph [ref=e146]: Ich sitze in Nindorf und komme zu dir, zum Beispiel nach Meldorf, Heide, Büsum, Marne, Brunsbüttel, Burg, Albersdorf und Wesselburen. Per Fernzugriff helfe ich dir auch von weiter weg.
+    - region [ref=e147]:
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: Fragen
+          - heading "Häufige Fragen" [level=2] [ref=e151]
+        - generic [ref=e152]:
+          - group [ref=e153]:
+            - generic "Was kostet IT-Hilfe?" [ref=e154] [cursor=pointer]
+            - paragraph [ref=e155]: Fernhilfe kostet 35 € pro Stunde, ein Besuch vor Ort 45 € pro Stunde plus 10 € Anfahrt, abgerechnet im 15-Minuten-Takt. Eine Preisspanne nenne ich dir vor dem Termin, damit du nichts Unerwartetes bezahlst.
+          - group [ref=e156]:
+            - generic "Kommst du auch zu mir nach Hause?" [ref=e157] [cursor=pointer]
+            - paragraph [ref=e158]: Ja, in Dithmarschen und Umgebung komme ich zu dir. Kleinere Dinge erledige ich auf Wunsch auch per Fernzugriff, dann musst du nicht auf mich warten.
+          - group [ref=e159]:
+            - generic "Ich kenne mich gar nicht aus. Ist das ein Problem?" [ref=e160] [cursor=pointer]
+            - paragraph [ref=e161]: Nein, dafür bin ich da. Ich erkläre dir in einfachen Worten, was ich mache, und nehme mir Zeit für Fragen.
+          - group [ref=e162]:
+            - generic "Kannst du auch kaputte Geräte reparieren?" [ref=e163] [cursor=pointer]
+            - paragraph [ref=e164]: Nein. Ich richte Geräte ein und helfe bei der Nutzung. Hardware-Reparaturen und Datenrettung gehören nicht zu meinem Angebot.
+          - group [ref=e165]:
+            - generic "Ist die Anfrage verbindlich?" [ref=e166] [cursor=pointer]
+            - paragraph [ref=e167]: Nein. Die Anfrage ist kostenlos und unverbindlich.
+    - region [ref=e168]:
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]: Auch von mir
+          - heading [level=2] [ref=e172]:
+            - text: Du brauchst eine
+            - emphasis [ref=e173]: Webseite
+            - text: "?"
+        - paragraph [ref=e174]: "Hinter BW Studios steckt auch Webdesign: Webseiten und Landingpages für Betriebe und Vereine in Dithmarschen, mit Hosting und Pflege."
+        - paragraph [ref=e175]:
+          - link "Webdesign in Dithmarschen" [ref=e176] [cursor=pointer]:
+            - /url: https://bwstudios.de/webdesign/
+          - link "BW Studios" [ref=e177] [cursor=pointer]:
+            - /url: https://bwstudios.de/
+    - generic [ref=e179]:
+      - generic [ref=e180]:
+        - generic [ref=e181]: Kontakt
+        - heading "Wobei kann ich dir helfen?" [level=2] [ref=e182]
+        - paragraph [ref=e183]: Schreib mir kurz, was eingerichtet werden soll oder was nicht läuft. Ich melde mich zeitnah persönlich bei dir. Kostenlos und unverbindlich.
+        - link "Hilfe anfragen" [ref=e184] [cursor=pointer]:
+          - /url: "#anfrage-form"
+        - generic [ref=e185]:
+          - link "+49 151 18409579" [ref=e186] [cursor=pointer]:
+            - /url: tel:+4915118409579
+          - link "info@bwstudios.de" [ref=e187] [cursor=pointer]:
+            - /url: mailto:info@bwstudios.de
+      - form "Anfrage" [ref=e188]:
+        - generic [aria-hidden]:
+          - generic: Website
+          - textbox
+        - group "Was möchtest du?" [ref=e189]:
+          - generic [ref=e191]:
+            - radio "Projekt anfragen" [checked] [ref=e192] [cursor=pointer]
+            - generic [ref=e193]: Projekt anfragen
+          - generic [ref=e194]:
+            - radio "Termin vereinbaren" [ref=e195] [cursor=pointer]
+            - generic [ref=e196]: Termin vereinbaren
+          - generic [ref=e197]:
+            - radio "Allgemeine Frage" [ref=e198] [cursor=pointer]
+            - generic [ref=e199]: Allgemeine Frage
+        - generic [ref=e200]:
+          - generic [ref=e201]: Name *
+          - textbox "Name" [ref=e202]
+        - generic [ref=e203]:
+          - generic [ref=e204]: E-Mail *
+          - textbox "E-Mail" [ref=e205]
+        - group "Was brauchst du?" [ref=e206]:
+          - generic [ref=e208]:
+            - radio "Drucker oder Scanner" [ref=e209] [cursor=pointer]
+            - generic [ref=e210]: Drucker oder Scanner
+          - generic [ref=e211]:
+            - radio "WLAN oder Router" [ref=e212] [cursor=pointer]
+            - generic [ref=e213]: WLAN oder Router
+          - generic [ref=e214]:
+            - radio "Smartphone oder Tablet" [ref=e215] [cursor=pointer]
+            - generic [ref=e216]: Smartphone oder Tablet
+          - generic [ref=e217]:
+            - radio "Computer oder Laptop" [ref=e218] [cursor=pointer]
+            - generic [ref=e219]: Computer oder Laptop
+          - generic [ref=e220]:
+            - radio "E-Mail-Konto" [ref=e221] [cursor=pointer]
+            - generic [ref=e222]: E-Mail-Konto
+          - generic [ref=e223]:
+            - radio "Sonstiges" [ref=e224] [cursor=pointer]
+            - generic [ref=e225]: Sonstiges
+        - generic [ref=e226]:
+          - generic [ref=e227]: Anmerkungen (optional)
+          - textbox "Anmerkungen (optional)" [ref=e228]
+        - generic [ref=e229]:
+          - button "Zurück" [ref=e230] [cursor=pointer]
+          - button "Weiter" [ref=e231] [cursor=pointer]
+        - button "Anfrage senden" [ref=e232] [cursor=pointer]
+        - paragraph [ref=e233]:
+          - text: Mit dem Absenden bestätigst du, dass du die
+          - link "Datenschutzerklärung" [ref=e234] [cursor=pointer]:
+            - /url: /datenschutz
+          - text: gelesen hast.
+        - paragraph [ref=e235]: Du bekommst eine persönliche Antwort von mir.
+        - status [ref=e236]
+  - contentinfo [ref=e237]:
+    - generic [ref=e238]:
+      - generic [ref=e239]: © 2026 BW Studios (BWStudios) · Website & technische Umsetzung von BW Studios
+      - navigation "Fußbereich" [ref=e240]:
+        - link "BW Studios" [ref=e241] [cursor=pointer]:
+          - /url: https://bwstudios.de/
+        - link "Webdesign" [ref=e242] [cursor=pointer]:
+          - /url: https://bwstudios.de/webdesign/
+        - link "Drucker & Scanner" [ref=e243] [cursor=pointer]:
+          - /url: /drucker-einrichten/
+        - link "WLAN & Router" [ref=e244] [cursor=pointer]:
+          - /url: /wlan-einrichten/
+        - link "Smartphone & Tablet" [ref=e245] [cursor=pointer]:
+          - /url: /smartphone-einrichten/
+        - link "Computer & Laptop" [ref=e246] [cursor=pointer]:
+          - /url: /computer-einrichten/
+        - link "Impressum" [ref=e247] [cursor=pointer]:
+          - /url: /impressum
+        - link "Datenschutz" [ref=e248] [cursor=pointer]:
+          - /url: /datenschutz
+    - generic [ref=e249]:
+      - text: BW Studios · Hauptstraße 74 · 25704 Nindorf ·
+      - link "+49 151 18409579" [ref=e250] [cursor=pointer]:
+        - /url: tel:+4915118409579
