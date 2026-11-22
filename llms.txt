@@ -9,6 +9,14 @@
 - [WLAN & Router](https://it.bwstudios.de/wlan-einrichten/): Neuer Router vom Anbieter oder schlechter Empfang im Obergeschoss? Ich richte dein WLAN ein, verbinde deine Geräte und sorge dafür, dass es im ganzen Haus läuft.
 - [Smartphone & Tablet](https://it.bwstudios.de/smartphone-einrichten/): Neues Handy gekauft und jetzt soll alles vom alten wieder drauf? Ich richte dein Smartphone oder Tablet ein, übertrage deine Daten und zeige dir die wichtigsten Handgriffe.
 - [Computer & Laptop](https://it.bwstudios.de/computer-einrichten/): Neuer Computer, aber alles ist fremd? Ich mache ihn startklar, spiele deine Daten vom alten Gerät rüber und zeige dir, wie du damit arbeitest.
+- [IT-Hilfe Meldorf](https://it.bwstudios.de/it-hilfe-meldorf/): Drucker, WLAN, Smartphone und Computer einrichten in Meldorf, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Heide](https://it.bwstudios.de/it-hilfe-heide/): Drucker, WLAN, Smartphone und Computer einrichten in Heide, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Büsum](https://it.bwstudios.de/it-hilfe-buesum/): Drucker, WLAN, Smartphone und Computer einrichten in Büsum, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Marne](https://it.bwstudios.de/it-hilfe-marne/): Drucker, WLAN, Smartphone und Computer einrichten in Marne, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Brunsbüttel](https://it.bwstudios.de/it-hilfe-brunsbuettel/): Drucker, WLAN, Smartphone und Computer einrichten in Brunsbüttel, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Burg](https://it.bwstudios.de/it-hilfe-burg/): Drucker, WLAN, Smartphone und Computer einrichten in Burg, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Albersdorf](https://it.bwstudios.de/it-hilfe-albersdorf/): Drucker, WLAN, Smartphone und Computer einrichten in Albersdorf, vor Ort oder per Fernzugriff.
+- [IT-Hilfe Wesselburen](https://it.bwstudios.de/it-hilfe-wesselburen/): Drucker, WLAN, Smartphone und Computer einrichten in Wesselburen, vor Ort oder per Fernzugriff.
 - [Webdesign von BW Studios](https://bwstudios.de/webdesign/): Webseiten und Landingpages für Betriebe und Vereine in Dithmarschen.
 - [Impressum](https://it.bwstudios.de/impressum): Anbieterangaben von Bennet Wegener, Hauptstraße 74, 25704 Nindorf.
 - [Datenschutz](https://it.bwstudios.de/datenschutz): Datenschutzerklärung.
